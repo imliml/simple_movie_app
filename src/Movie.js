@@ -1,11 +1,11 @@
 import React from "react";
 import Poster from "./Poster";
 
-const Movie = (props) => {
+const Movie = ({ title, poster }) => {
   return (
     <div>
-      <h1>{props.title}</h1>
-      <Poster poster={props.poster} />
+      <h1>{title}</h1>
+      <Poster poster={poster} />
     </div>
   );
 };

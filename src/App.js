@@ -26,18 +26,29 @@ const movies = [
   },
 ];
 
-function App() {
-  return (
-    <div className="App">
-      {movies.map((movie) => {
-        return (
-          <div>
-            <Movie title={movie.title} poster={movie.poster} />
-          </div>
-        );
-      })}
-    </div>
-  );
+class App extends React.Component {
+  // 상태값 초기 선언을 해주는 위치
+  state = {
+    greeting: "Hello!",
+  };
+  // 라이프사이클 선언
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        greeting: "Hi!",
+      });
+    }, 5000);
+  }
+  // 함수선언
+
+  // return은 화면상 보여지는거
+  render() {
+    return (
+      <div className="App">
+        <h1>{this.state.greeting}</h1>
+      </div>
+    );
+  }
 }
 
 export default App;
