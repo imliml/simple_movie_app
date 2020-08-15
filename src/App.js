@@ -1,4 +1,5 @@
 import React from "react";
+import Movie from "./Movie";
 
 import "./App.css";
 
@@ -31,8 +32,7 @@ function App() {
       {movies.map((movie) => {
         return (
           <div>
-            <h1>{movie.title}</h1>
-            <img src={movie.poster} />
+            <Movie title={movie.title} poster={movie.poster} />
           </div>
         );
       })}
