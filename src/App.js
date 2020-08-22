@@ -1,5 +1,5 @@
 import React from "react";
-// import Movie from "./Movie";
+import Article from "./Article";
 
 import "./App.css";
 
@@ -14,7 +14,14 @@ class App extends React.Component {
 
   _renderArticles = () => {
     const articles = this.state.articles.map((article) => {
-      return <h1>{article.title}</h1>;
+      return (
+        <Article
+          title={article.title}
+          urlToImage={article.urlToImage}
+          description={article.description}
+          publishedAt={article.publishedAt}
+        />
+      );
     });
     return articles;
   };
